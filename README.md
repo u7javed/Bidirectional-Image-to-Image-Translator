@@ -37,6 +37,11 @@ Python Files
     
   - generate_image.py
     - Executable python script which will perform the image-to-image translation and save the translated file to specified directory, location to generator, and directory for saved image. Run the script in a similar fashion described above. Whether it's segmentation-to-image or image-to-segmentation will depend on what generator you choose.
+    
+    Here is a test run example:
+    ```
+    python generate_image.py --image_file test_image.jpg --file_width 256 --file_height 256 --channels 3 --dir_to_generator saved_models/real2seg_gen_50.pt --save_directory test_directory
+    ```
 
 ## Dataset
 
