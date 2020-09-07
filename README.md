@@ -12,7 +12,7 @@ The CycleGAN utilizes Residual Blocks to learn feature mappings through convolut
 
 ![](data/uploads/CycleGAN_architecture.png)
 
-##Create the Translator
+## Create the Translator
 
 Python Files
   - models.py
