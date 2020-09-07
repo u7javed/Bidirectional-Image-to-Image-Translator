@@ -36,7 +36,7 @@ Python Files
     followed by a space to seperate each hyperparameter entered. Please refer to **script_run.ipynb** Jupyter Notebook file to see specific hyperparamters
     
   - generate_image.py
-    - Executable python script which will perform the image-to-image translation and save the translated file to specified directory. The hyperparameters include seg2image or image2seg, location to generator, and directory for saved image. Run the script in a similar fashion described above.
+    - Executable python script which will perform the image-to-image translation and save the translated file to specified directory, location to generator, and directory for saved image. Run the script in a similar fashion described above. Whether it's segmentation-to-image or image-to-segmentation will depend on what generator you choose.
 
 ## Dataset
 
