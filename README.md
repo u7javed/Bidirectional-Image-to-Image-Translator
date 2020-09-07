@@ -38,6 +38,19 @@ Semantic Understanding of Scenes through ADE20K Dataset. Bolei Zhou, Hang Zhao, 
 
 ![](data/uploads/sample4.png)
 
+## Next Steps
+
+As you can see from the samples, the joint Generators in the CycleGAN are able to learn the feature association fairly well however, there are still some discrepancies with how the Generator interprets the semantic information with the dataset. Similar objects within an image may have different semantic information causing the generating to assume they are different objects or materials. Also, more often than not, the semantic image cuts out a lot of information present within the original image, making it virtually impossible for the generator the mimic the original image.
+
+### For example, take a look at the generated image from the input segmentation:
+
+### Segmentation -> Image
+![](data/uploads/data_discrepency1)
+
+### Original Image
+![](data/uploads/data_discrepency2)
+
+As you can see, the box-shaped objects are meant to be screens but the specific output of the screens are omitted in the segmented image. Many details from the bottom part of the image are also omitted making it hard for Generator to predict they are screens rather than simple windows or ornaments on the wall is is the case with a lot of other examples. The CycleGAN was also trained for relatively low epochs and low sample size due to limited resouces and memory. For better performance, a more semantically organized dataset with larger sample pool would be required. More epochs trained with larger translation component also has shown to increase performance and quality of generated images.
 
 
 
