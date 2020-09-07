@@ -12,6 +12,23 @@ The CycleGAN utilizes Residual Blocks to learn feature mappings through convolut
 
 ![](data/uploads/CycleGAN_architecture.png)
 
+##Create the Translator
+
+Python Files
+  - models.py
+    - Contains the model architectures described in the ESRGAN paper including the Dense Blocks, Residual to Residual Dense Blocks, Generator, Discriminator, and VGG19 feature extractor (pre-trained model).
+    
+  - train.py
+    - This file is an executable script which trains the GAN model and saves the generator, discriminator, and their respective optimizers to a specified directory every epoch. It also saves sample images of the generator's performance every epoch to a specified directory. Run this file as follows:
+    ```
+    python train.py --hyperparameters
+    ```
+    --hyperparameters are a list of hyperparameters to call in order to properly execute train.py. Each hyperparamter is to be entered in this format:
+    ```
+    --image_directory data/images/
+    ```
+    followed by a space to seperate each hyperparameter entered. Please refer to **run_script.ipynb** Jupyter Notebook file to see specific hyperparamters
+
 ## Dataset
 
 The Dataset I used ADE20K Segmentation Dataset composed of various images paired with their segmented counterparts as well as text files containing details of the image itself. In this experiment, I split the real images and segmented images into seperate folders and loaded them as pairs which is not necessary as CycleGAN architecture is designed to handle unpaired translation. Link to dataset: https://groups.csail.mit.edu/vision/datasets/ADE20K/
