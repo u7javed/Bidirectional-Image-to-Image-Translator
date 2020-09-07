@@ -8,7 +8,7 @@ The Cycle GAN learns the mapping G: X -> Y where X is defined as the first set o
 
 ![](data/uploads/CycleGAN_map_function.png)
 
-The CycleGAN utilizes Residual Blocks to learn feature mappings through convolutions and translates from one feature to the other. The CycleGAN generator can be split into 3 main components. The Encoder, Translator, and Decoder. The Encoder is where downsizing occurs and feature space expansion to be passed through the translator. The translator is a suequence if residual blocks learning the feature mapping described above. The Decoder upsamples the image dimensions and shrinks the feature space size back to the original channel size, in this case, RGB. The CycleGAN also utilizes Instance Normalization instead of Batch Normalization and Reflection Padding to reduce artifacts within generated data. 
+The CycleGAN utilizes Residual Blocks to learn feature mappings through convolutions and translates from one feature to the other. The CycleGAN generator can be split into 3 main components. The Encoder, Translator, and Decoder. The Encoder is where downsizing occurs and feature space expansion to be passed through the translator. The translator is a sequence of residual blocks learning the feature mapping described above. The Decoder upsamples the image dimensions and shrinks the feature space size back to the original channel size, in this case, RGB. The CycleGAN also utilizes Instance Normalization instead of Batch Normalization and Reflection Padding to reduce artifacts within generated data. 
 
 ![](data/uploads/CycleGAN_architecture.png)
 
