@@ -6,7 +6,11 @@ Reference to CycleGAN paper: https://arxiv.org/pdf/1703.10593.pdf
 
 The Cycle GAN learns the mapping G: X -> Y where X is defined as the first set of images and Y is the augmented or segmented Image form. The CycleGAN also couples the inverse mapping of G, F: Y -> X which takes the augmented or segmented image as input and generates the inital image form. In an ideal case, F(G(X)) = F(Y) = X. These two inverse mappings are represented as coupled generators with joint loss trained coined cycle-consistency loss. The forward cycle is defined by: y -> F(x) -> G(F(y)) = y while the backward cycle-consistency loss is defined as: x -> G(x) -> F(G(x)) = x; hence the name, CycleGAN. 
 
+![](data/uploads/CycleGAN_map_function.png)
+
 The CycleGAN utilizes Residual Blocks to learn feature mappings through convolutions and translates from one feature to the other. The CycleGAN generator can be split into 3 main components. The Encoder, Translator, and Decoder. The Encoder is where downsizing occurs and feature space expansion to be passed through the translator. The translator is a suequence if residual blocks learning the feature mapping described above. The Decoder upsamples the image dimensions and shrinks the feature space size back to the original channel size, in this case, RGB. The CycleGAN also utilizes Instance Normalization instead of Batch Normalization and Reflection Padding to reduce artifacts within generated data. 
+
+![](data/uploads/CycleGAN_architecture.png)
 
 ## Dataset
 
@@ -19,6 +23,21 @@ Scene Parsing through ADE20K Dataset. Bolei Zhou, Hang Zhao, Xavier Puig, Sanja 
 Semantic Understanding of Scenes through ADE20K Dataset. Bolei Zhou, Hang Zhao, Xavier Puig, Tete Xiao, Sanja Fidler, Adela Barriuso and Antonio Torralba. International Journal on Computer Vision (IJCV). https://arxiv.org/pdf/1608.05442.pdf
 
 ## Sample Images:
+
+### Segmentation -> Image
+
+![](data/uploads/sample1.png)
+
+![](data/uploads/sample0.png)
+
+![](data/uploads/sample2.png)
+
+### Image -> Segmentation
+
+![](data/uploads/sample3.png)
+
+![](data/uploads/sample4.png)
+
 
 
 
