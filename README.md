@@ -33,7 +33,7 @@ Python Files
     ```
     --image_directory data/images/
     ```
-    followed by a space to seperate each hyperparameter entered. Please refer to **run_script.ipynb** Jupyter Notebook file to see specific hyperparamters
+    followed by a space to seperate each hyperparameter entered. Please refer to **script_run.ipynb** Jupyter Notebook file to see specific hyperparamters
     
   - generate_image.py
     - Executable python script which will perform the image-to-image translation and save the translated file to specified directory. The hyperparameters include seg2image or image2seg, location to generator, and directory for saved image. Run the script in a similar fashion described above.
