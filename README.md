@@ -17,6 +17,12 @@ The CycleGAN utilizes Residual Blocks to learn feature mappings through convolut
 Python Files
   - models.py
     - Contains the model architectures described in the ESRGAN paper including the Dense Blocks, Residual to Residual Dense Blocks, Generator, Discriminator, and VGG19 feature extractor (pre-trained model).
+   
+  - dataset.py
+    - Contains the dataset builder class the seperates segmented data and real data to batched pairs and samples the data based on specified size.
+    
+  - scheduler.py
+    - Contains the optimizer learning rate scheduler class calssed Lambda_LR or Lambda Learning Rate which adjusts learning rate as the training goes on. It also contains a replay buffer that augments the data to more appropriately fit with it's respective discriminator.
     
   - train.py
     - This file is an executable script which trains the GAN model and saves the generator, discriminator, and their respective optimizers to a specified directory every epoch. It also saves sample images of the generator's performance every epoch to a specified directory. Run this file as follows:
