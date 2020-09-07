@@ -45,10 +45,10 @@ As you can see from the samples, the joint Generators in the CycleGAN are able t
 ### For example, take a look at the generated image from the input segmentation:
 
 ### Segmentation -> Image
-![](data/uploads/data_discrepency1)
+![](data/uploads/data_discrepency1.png)
 
 ### Original Image
-![](data/uploads/data_discrepency2)
+![](data/uploads/data_discrepency2.png)
 
 As you can see, the box-shaped objects are meant to be screens but the specific output of the screens are omitted in the segmented image. Many details from the bottom part of the image are also omitted making it hard for Generator to predict they are screens rather than simple windows or ornaments on the wall is is the case with a lot of other examples. The CycleGAN was also trained for relatively low epochs and low sample size due to limited resouces and memory. For better performance, a more semantically organized dataset with larger sample pool would be required. More epochs trained with larger translation component also has shown to increase performance and quality of generated images.
 
